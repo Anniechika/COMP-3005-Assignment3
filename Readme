@@ -1,0 +1,31 @@
+Video link: https://youtu.be/pdN8qaPpbY8
+
+Instruction for Installation: 
+    - First, run the query provided below step by step to set up the database. 
+    - The database need to have the same username and password listed in the db.js file. 
+    - The database must have a name called Assignment3
+    - Then, type 'npm install' in the terminal to install all the dependencies need for the project. 
+    - After the installation is complete, make sure you have "express": "^4.18.3" in your dependency in your package.json
+    - Type npm start to start the web applictaion.
+
+
+Query for set up Database: 
+
+DROP TABLE IF EXISTS students; 
+
+DELETE FROM students;
+
+
+CREATE TABLE students (
+    student_id SERIAL PRIMARY KEY,
+    first_name TEXT NOT NULL,
+    last_name TEXT NOT NULL,
+    email TEXT NOT NULL UNIQUE,
+    enrollment_date DATE
+);
+
+INSERT INTO students (first_name, last_name, email, enrollment_date) VALUES
+('John', 'Doe', 'john.doe@example.com', '2023-09-01'),
+('Jane', 'Smith', 'jane.smith@example.com', '2023-09-01'),
+('Jim', 'Beam', 'jim.beam@example.com', '2023-09-02'); 
+

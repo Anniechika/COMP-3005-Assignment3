@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Student Management</title>
+  </head>
+  <body>
+    <h1>Student Management System</h1>
+    <h2>Add Student</h2>
+    <form id="studentForm">
+      <input type="text" id="firstName" placeholder="First Name" required />
+      <input type="text" id="lastName" placeholder="Last Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input
+        type="date"
+        id="enrollmentDate"
+        placeholder="Enrollment Date"
+        required
+      />
+      <button type="submit">Submit</button>
+    </form>
+
+    <h2>Update Student Email</h2>
+    <form id="updateEmailForm">
+      <input
+        type="number"
+        id="updateStudentId"
+        placeholder="Student ID"
+        required
+      />
+      <input type="email" id="updateEmail" placeholder="New Email" required />
+      <button type="submit">Update Email</button>
+    </form>
+
+    <h2>Delete Student</h2>
+    <input type="number" id="deleteStudentId" placeholder="Student ID" />
+    <button onclick="deleteStudent()">Delete Student</button>
+
+    <h2>Students List</h2>
+    <div id="studentsList"></div>
+    <button onclick="getAllStudents()">Get Student</button>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
